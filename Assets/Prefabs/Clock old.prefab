@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 5653374411554291973}
   - component: {fileID: 5653374411554291972}
   m_Layer: 0
-  m_Name: Clock
+  m_Name: Clock old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

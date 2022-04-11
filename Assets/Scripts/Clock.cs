@@ -14,11 +14,6 @@ public class Clock : MonoBehaviour
     Transform secondsPivot;
 
 
-    void Awake()
-    {
-        
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +25,8 @@ public class Clock : MonoBehaviour
         DateTime time = DateTime.Now;
         TimeSpan timeSpan = time.TimeOfDay;
 
-        // hoursPivot.localRotation = Quaternion.Euler(0f, 0f, -30f * (float)timeSpan.TotalHours);
-        // minutesPivot.localRotation = Quaternion.Euler(0f, 0f, -6f * (float)timeSpan.TotalMinutes);
-        secondsPivot.localRotation = Quaternion.Euler(0f, 0f, -6f * (float)timeSpan.Minutes);
+        hoursPivot.localRotation = Quaternion.Euler(30f * (float)timeSpan.TotalHours, 0f, 0f);
+        minutesPivot.localRotation = Quaternion.Euler(6f * (float)timeSpan.TotalMinutes, 0f, 0f);
+        secondsPivot.localRotation = Quaternion.Euler(6f * (float)timeSpan.Seconds, 0f, 0f);
     }
 }
